@@ -1,25 +1,32 @@
 #pragma once
 
-
 #include "Teacher.h"
 #include <vector>
 #include <fstream>
 #include <string>
+#include <boost/archive/binary_oarchive.hpp>
+#include <boost/archive/binary_iarchive.hpp>
+#include <boost/serialization/shared_ptr.hpp>
+#include <boost/serialization/vector.hpp>
 
-class DanceStudio {
+class vasuikova_DanceStudio {
 private:
-    std::vector<Teacher*> teachers;
+    std::vector<std::shared_ptr<vasuikova_Teacher>> teachers;
+
+    friend class boost::serialization::access;
+
+    template<class Archive>
+    void serialize(Archive& ar, const unsigned int version) {
+        ar& teachers;
+    }
 
 public:
-    DanceStudio();
-    ~DanceStudio();
+    vasuikova_DanceStudio();
+    ~vasuikova_DanceStudio();
 
-    void addTeacher();
+    void add(std::shared_ptr<vasuikova_Teacher> T);
     void displayAllTeachers() const;
-    void readFromFile(const std::wstring& filename);
-    void writeToFile(const std::wstring& filename) ;
+    void readFromFile(const std::wstring filename);
+    void writeToFile(const std::wstring filename) const;
     void clearList();
-
-    size_t getTeachersCount() const { return teachers.size(); }
-    bool isEmpty() const { return teachers.empty(); }
 };

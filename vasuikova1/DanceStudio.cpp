@@ -5,20 +5,20 @@
 
 using namespace std;
 
-DanceStudio::DanceStudio() {}
+vasuikova_DanceStudio::vasuikova_DanceStudio() {}
 
-DanceStudio::~DanceStudio() {
+vasuikova_DanceStudio::~vasuikova_DanceStudio() {
     clearList();
 }
 
-void DanceStudio::addTeacher() {//параметр
-    Teacher* newTeacher = new Teacher();
+void vasuikova_DanceStudio::add(shared_ptr<vasuikova_Teacher> newTeacher) {
+ //   shared_ptr<vasuikova_Teacher> newTeacher = T;
     newTeacher->readFromConsole();
     teachers.push_back(newTeacher);
     wcout << L"Учитель добавлен" << endl;
 }
 
-void DanceStudio::displayAllTeachers() const {
+void vasuikova_DanceStudio::displayAllTeachers() const {
     if (teachers.empty()) {
         wcout << L"Список преподаватель пустой" << endl;
         return;
@@ -27,39 +27,27 @@ void DanceStudio::displayAllTeachers() const {
     wcout << L"\nСПИСОК ПРЕПОДАВАТЕЛЕЙ" << endl;
     for (size_t i = 0; i < teachers.size(); ++i) {
         teachers[i]->displayToConsole();
+        wcout << endl;
     }
 }
 
-void DanceStudio::readFromFile(const wstring& filename) {
-    wifstream inFile(filename);
-    clearList();
-    inFile.imbue(locale("ru_RU.UTF-8"));
-    int count;
-    inFile >> count;
-    inFile.ignore();
-    for (int i = 0; i < count; ++i) {
-        Teacher* teacher = new Teacher();
-        teacher->readFromFile(inFile);
-        teachers.push_back(teacher);
-    }
-    wcout << L"Данные загружены " << endl;
-}
-
-void DanceStudio::writeToFile(const wstring& filename) 
+void vasuikova_DanceStudio::readFromFile(const std::wstring filename)
 {
-    wofstream outfile(filename);
-    outfile.imbue(locale("ru_RU.UTF-8"));
-    outfile << teachers.size() << endl;
-    for (const auto& teacher : teachers) {
-        teacher->writeToFile(outfile);
-    }
-    wcout << L"Данные сохранены" << endl;
+    ifstream ifile(filename);
+    boost::archive::binary_iarchive ia(ifile);
+    ia >> this->teachers;
+    wcout << L"Преподаватели загружены из файла" << endl;
 }
 
-void DanceStudio::clearList() {
-    for (auto& teacher : teachers) {
-        delete teacher;
-    }
+void vasuikova_DanceStudio::writeToFile(const std::wstring filename) const
+{
+    ofstream ofile(filename);
+    boost::archive::binary_oarchive oa(ofile);
+    oa << this->teachers;
+    wcout << L"Преподаватели сохранены в файл" << endl;
+}
+
+void vasuikova_DanceStudio::clearList() {
     teachers.clear();
     wcout << L"Список очищен" << endl;
 }

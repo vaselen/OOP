@@ -3,6 +3,13 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+\vasuikova1\boost.build
+\vasuikova1\boost_1_89_0
+
+*\boost.build\
+
+C:\Users\0\Desktop\5 семестр\ООПП\OOP\vasuikova1\boost.build\
+
 # User-specific files
 *.rsuser
 *.suo
@@ -399,3 +406,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/vasuikova1/boost.build
+/vasuikova1/boost_1_89_0
+/vasuikova1/boost_1_89_0
+/vasuikova1/boost_1_89_0/boost
+/vasuikova1/boost.build

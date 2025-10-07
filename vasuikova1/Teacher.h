@@ -3,24 +3,39 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <boost/serialization/access.hpp>
+#include <boost/serialization/string.hpp>
+#include <boost/serialization/export.hpp>
+#include <boost/serialization/base_object.hpp>
 
-class Teacher {
-private:
+class vasuikova_Teacher {
+protected:
     std::wstring name;
     int age;
     std::wstring danceStyle;
 
-public:
-    Teacher();
-    Teacher(const std::wstring& name, int age, const std::wstring& danceStyle);
+    friend class boost::serialization::access;
 
-    void readFromConsole();
-    void displayToConsole() const;
-    void readFromFile(std::wifstream& inFile);
-    void writeToFile(std::wofstream& outFile) ;
+public:
+    vasuikova_Teacher(): name(L""), age(0), danceStyle(L"") {}
+    vasuikova_Teacher(std::wstring& name, int age, std::wstring& danceStyle);
+
+    virtual ~vasuikova_Teacher();
+
+    virtual void readFromConsole();
+    virtual void displayToConsole() const;
 
     std::wstring getName() const { return name; }
     int getAge() const { return age; }
     std::wstring getDanceStyle() const { return danceStyle; }
+
+    template<class Archive>
+    void serialize(Archive& ar, const unsigned int version) {
+        ar& name;
+        ar& age;
+        ar& danceStyle;
+    }
 };
+
+BOOST_CLASS_EXPORT_KEY(vasuikova_Teacher)
 

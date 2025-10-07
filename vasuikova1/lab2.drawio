@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 YaBrowser/25.8.0.0 Safari/537.36" version="28.2.5">
+  <diagram name="Страница — 1" id="AWImiVKS8cElqT_JNKbd">
+    <mxGraphModel dx="1042" dy="668" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VTjfexAmIyrsBulpZj1l-5" value="Teacher" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="120" width="160" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-6" value="&lt;div&gt;- fname : wstring&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- age : int&lt;/span&gt;&lt;/div&gt;&lt;div&gt;-&amp;nbsp;danceStyle : wstring&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VTjfexAmIyrsBulpZj1l-5" vertex="1">
+          <mxGeometry y="26" width="160" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="VTjfexAmIyrsBulpZj1l-5" vertex="1">
+          <mxGeometry y="110" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-8" value="+ Teacher()&lt;div&gt;+ readFromConsole()&lt;/div&gt;&lt;div&gt;+ displayToConsole()&lt;/div&gt;&lt;div&gt;+ readFromFile(wifstream&amp;amp; inFile)&lt;/div&gt;&lt;div&gt;+writeToFile(wofstream&amp;amp; outFile)&lt;/div&gt;&lt;div&gt;+&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;getName()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;getAge()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;getDanceStyle()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+serialize()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VTjfexAmIyrsBulpZj1l-5" vertex="1">
+          <mxGeometry y="118" width="160" height="172" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-13" value="Director" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="570" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-14" value="- work_experience: int&lt;div&gt;- phone_number : wstring&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VTjfexAmIyrsBulpZj1l-13" vertex="1">
+          <mxGeometry y="26" width="160" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="VTjfexAmIyrsBulpZj1l-13" vertex="1">
+          <mxGeometry y="70" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-16" value="+ Director()&lt;div&gt;+ readFromConsole()&lt;/div&gt;&lt;div&gt;+ displayToConsole()&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+serialize()&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VTjfexAmIyrsBulpZj1l-13" vertex="1">
+          <mxGeometry y="78" width="160" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-18" value="DanceStudio" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="440" y="120" width="160" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-19" value="&lt;div&gt;- students : vector&amp;lt;shared_ptr&amp;lt;Teacher&amp;gt;&amp;gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VTjfexAmIyrsBulpZj1l-18" vertex="1">
+          <mxGeometry y="26" width="160" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-20" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="VTjfexAmIyrsBulpZj1l-18" vertex="1">
+          <mxGeometry y="90" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-21" value="+ DanceStudio()&lt;div&gt;+ add()&lt;/div&gt;&lt;div&gt;+ displayAllTeachers()&lt;/div&gt;&lt;div&gt;+ readFromFilewstring filename)&lt;/div&gt;&lt;div&gt;+ writeToFile(const wstring filename)&lt;/div&gt;&lt;div&gt;+&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;clearList()&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VTjfexAmIyrsBulpZj1l-18" vertex="1">
+          <mxGeometry y="98" width="160" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-26" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.626;exitY=0.984;exitDx=0;exitDy=0;exitPerimeter=0;startArrow=openThin;startFill=0;strokeWidth=2;" parent="1" source="VTjfexAmIyrsBulpZj1l-8" target="VTjfexAmIyrsBulpZj1l-13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="350" as="sourcePoint" />
+            <mxPoint x="60" y="370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="190" y="440" />
+              <mxPoint x="180" y="440" />
+              <mxPoint x="180" y="450" />
+              <mxPoint x="150" y="450" />
+              <mxPoint x="150" y="460" />
+              <mxPoint x="90" y="460" />
+              <mxPoint x="90" y="500" />
+              <mxPoint x="100" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-27" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="VTjfexAmIyrsBulpZj1l-26" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-28" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="VTjfexAmIyrsBulpZj1l-26" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VTjfexAmIyrsBulpZj1l-29" value="1" style="endArrow=none;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;fontSize=12;curved=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endFill=0;strokeWidth=2;" parent="1" source="VTjfexAmIyrsBulpZj1l-21" edge="1">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="40" y="420" as="sourcePoint" />
+            <mxPoint x="260" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

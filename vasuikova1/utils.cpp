@@ -6,14 +6,14 @@ using namespace std;
 int valid_int(int min_value, int max_value) {
     int value;
 
-    while ((cin >> value).fail()
-        || cin.peek() != '\n'
+    while ((wcin >> value).fail()
+        || wcin.peek() != '\n'
         || value < min_value || value > max_value)
     {
-        cin.clear();
-        cin.ignore(10000, '\n');
-        cout << "¬ведите число от " << min_value << " до " << max_value << endl;
+        wcin.clear();
+        wcin.ignore(10000, '\n');
+        wcout << L"¬ведите число от " << min_value << L" до " << max_value << endl;
     }
-    cin.ignore(10000, '\n');
+    wcin.ignore(10000, '\n');
     return value;
 }
