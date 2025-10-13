@@ -13,13 +13,6 @@ class vasuikova_DanceStudio {
 private:
     std::vector<std::shared_ptr<vasuikova_Teacher>> teachers;
 
-    friend class boost::serialization::access;
-
-    template<class Archive>
-    void serialize(Archive& ar, const unsigned int version) {
-        ar& teachers;
-    }
-
 public:
     vasuikova_DanceStudio();
     ~vasuikova_DanceStudio();

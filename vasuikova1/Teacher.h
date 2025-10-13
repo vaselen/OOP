@@ -25,10 +25,6 @@ public:
     virtual void readFromConsole();
     virtual void displayToConsole() const;
 
-    std::wstring getName() const { return name; }
-    int getAge() const { return age; }
-    std::wstring getDanceStyle() const { return danceStyle; }
-
     template<class Archive>
     void serialize(Archive& ar, const unsigned int version) {
         ar& name;

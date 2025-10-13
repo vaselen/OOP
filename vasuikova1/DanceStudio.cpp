@@ -12,7 +12,6 @@ vasuikova_DanceStudio::~vasuikova_DanceStudio() {
 }
 
 void vasuikova_DanceStudio::add(shared_ptr<vasuikova_Teacher> newTeacher) {
- //   shared_ptr<vasuikova_Teacher> newTeacher = T;
     newTeacher->readFromConsole();
     teachers.push_back(newTeacher);
     wcout << L"Учитель добавлен" << endl;
@@ -35,7 +34,7 @@ void vasuikova_DanceStudio::readFromFile(const std::wstring filename)
 {
     ifstream ifile(filename);
     boost::archive::binary_iarchive ia(ifile);
-    ia >> this->teachers;
+    ia >> teachers;
     wcout << L"Преподаватели загружены из файла" << endl;
 }
 
@@ -43,7 +42,7 @@ void vasuikova_DanceStudio::writeToFile(const std::wstring filename) const
 {
     ofstream ofile(filename);
     boost::archive::binary_oarchive oa(ofile);
-    oa << this->teachers;
+    oa << teachers;
     wcout << L"Преподаватели сохранены в файл" << endl;
 }
 
